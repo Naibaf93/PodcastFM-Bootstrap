@@ -1,0 +1,24 @@
+{
+  "name": "04-podcastapp-bootstrap",
+  "version": "1.0.0",
+  "description": "Bootstrap 5, SASS y Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naibaf93/PodcastFM-Bootstrap.git"
+  },
+  "author": "Fabian Huertas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naibaf93/PodcastFM-Bootstrap/issues"
+  },
+  "homepage": "https://github.com/Naibaf93/PodcastFM-Bootstrap#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.69.5"
+  }
+}
