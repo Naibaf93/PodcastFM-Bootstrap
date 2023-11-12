@@ -1,5 +1,1 @@
-$primary: purple;
-
-body {
-    background-color: $primary;
-}
+@use '../custom' as *;

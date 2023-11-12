@@ -18,7 +18,7 @@ function css( done ) {
     done();
 }
 
-function dev() {
+function dev( ) {
     watch('src/scss/**/*.scss', css); // va a revisar los cambios en los diferentes archivos y carpetas
 }
 
