@@ -11856,3 +11856,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.site-header {
+  background-image: linear-gradient(rgba(49, 60, 78, 0.7) 0%, rgba(49, 60, 78, 0.7) 100%), url("../img/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
