@@ -1,6 +1,6 @@
 /* Variables */
 
-const { src, dest, watch } = require('gulp');
+const { src, dest, watch, series } = require('gulp');
 
 // Compilar CSS
 const sass = require('gulp-sass')(require('sass'));
@@ -32,3 +32,4 @@ function imagenes(done) {
 exports.css = css;
 exports.dev = dev;
 exports.imagenes = imagenes;
+exports.default = series( imagenes, css, dev );
