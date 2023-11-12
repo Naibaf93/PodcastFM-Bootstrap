@@ -1,6 +1,6 @@
 /* Variables */
 
-const { src, dest } = require('gulp');
+const { src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 
 function css( done ) {
@@ -13,4 +13,9 @@ function css( done ) {
     done();
 }
 
+function dev() {
+    watch('src/scss/**/*.scss', css); // va a revisar los cambios en los diferentes archivos y carpetas
+}
+
 exports.css = css;
+exports.dev = dev;
