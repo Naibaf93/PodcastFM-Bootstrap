@@ -12332,3 +12332,37 @@ textarea.form-control-lg {
     width: 25%;
   }
 }
+.footer__logo {
+  width: 20rem;
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    margin-bottom: 0;
+  }
+}
+.footer__heading {
+  color: #84D9BC;
+}
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.footer__copyright {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
+  border-top: 2px solid #84D9BC;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 0;
+}
