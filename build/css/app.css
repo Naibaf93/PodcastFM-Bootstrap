@@ -12285,3 +12285,35 @@ textarea.form-control-lg {
   position: absolute;
   left: 0.5rem;
 }
+
+.footer {
+  background-color: #313C4E;
+  color: #fff;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer {
+    text-align: left;
+  }
+}
+.footer__container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
+}
+.footer__row {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
