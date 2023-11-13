@@ -8,6 +8,10 @@ const sass = require('gulp-sass')(require('sass'));
 // Imagenes
 const imagemin = require('gulp-imagemin');
 
+// Purge css
+
+const purgecss = require('gulp-purgecss');
+const rename = require('gulp-rename');
 function css( done ) {
     // Identificar el archivo principal
     
@@ -15,6 +19,18 @@ function css( done ) {
         .pipe( sass() )// Compilar sass
         .pipe( dest('build/css') )// Exportarlo o guardarlo en una ubicación
 
+    done();
+}
+
+function cssbuild( done ) {
+    src('build/css/app.css')// lee el archivo
+    .pipe( rename({
+        suffix: '.min'
+    }))
+    .pipe(purgecss ({
+        content: ['index.html']
+    }))
+    .pipe ( dest('build/css') )
     done();
 }
 
@@ -33,3 +49,4 @@ exports.css = css;
 exports.dev = dev;
 exports.imagenes = imagenes;
 exports.default = series( imagenes, css, dev );
+exports.build = series( cssbuild );
