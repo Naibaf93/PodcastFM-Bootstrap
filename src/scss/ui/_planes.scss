@@ -1,0 +1,47 @@
+@use '../custom' as *;
+@use 'utilidades/mixins' as m;
+
+$separacion: 4rem;  
+.planes {
+    h2 {
+        @include m.headingBorder($white, $primary);
+    }
+}
+
+.plan {
+    padding: 15rem 3rem 3rem 3rem;
+    border-bottom: 1px solid #e1e1e1;
+
+    @include media-breakpoint-up(md) {
+        border: none;
+        transition: transform .3s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    .precio {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &.inicio {
+        @include m.bgIcon('../img/icono_inicio.svg');
+    }
+
+    &.negocio {
+        @include m.bgIcon('../img/icono_negocio.svg');
+        @include media-breakpoint-up(md){ 
+            margin-top: -#{$separacion};
+            margin-bottom: -#{$separacion};
+            border-radius: 2rem;
+            z-index: 100;
+            padding-top: calc(16rem + #{$separacion});
+            background-position: 50% calc(2rem + #{$separacion});
+        }
+    }
+
+    &.pro {
+        @include m.bgIcon('../img/icono_pro.svg');
+    }
+}

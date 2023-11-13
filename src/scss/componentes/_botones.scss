@@ -13,3 +13,15 @@
         display: inline-block;
     }
 }
+
+.boton-plan {
+    @extend .btn-header; // heredamos estilos
+    border: 1px solid $white;
+    &:hover {
+        border: 1px solid $white;
+    }
+
+    @include media-breakpoint-up(md) {
+        display: inline-block;
+    }
+}
